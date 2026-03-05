@@ -1,10 +1,10 @@
 {
   "name": "circuit-to-canvas",
   "main": "dist/index.js",
-  "version": "0.0.89",
+  "version": "0.0.90",
   "type": "module",
   "scripts": {
-    "build": "tsup-node ./lib/index.ts --format esm --dts",
+    "build": "node init && tsup-node ./lib/index.ts --format esm --dts",
     "format": "biome format --write .",
     "format:check": "biome format ."
   },
@@ -29,6 +29,8 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "transformation-matrix": "^3.1.0"
   }
 }
